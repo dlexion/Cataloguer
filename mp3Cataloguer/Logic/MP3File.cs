@@ -37,6 +37,11 @@ namespace mp3Cataloguer.Logic
         public MP3File(string path) : base(path)
         {
             ID3v1.ReadID3v1(this);
+
+            if (id3Genre > 79)
+            {
+                id3Genre = 255;
+            }
             genre = (Genres)id3Genre;
         }
 
