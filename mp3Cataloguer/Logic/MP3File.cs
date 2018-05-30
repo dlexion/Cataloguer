@@ -1,5 +1,4 @@
 ﻿using System;
-using WMPLib;
 
 using mp3Cataloguer.Enums;
 
