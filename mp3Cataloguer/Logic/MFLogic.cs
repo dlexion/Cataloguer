@@ -155,5 +155,36 @@ namespace mp3Cataloguer.Logic
 
             (mForm.TabControls[mForm.SelectedTabIndex] as Page).StartSearching(str);
         }
+
+        public void Backup()
+        {
+            try
+            {
+                GoogleDrive.Upload("data.xml");
+            }
+            catch
+            {
+                
+            }
+            MessageBox.Show("Backuped");
+        }
+
+        public void Restore()
+        {
+            try
+            {
+                GoogleDrive.Download("data.xml");
+            }
+            catch { }
+        }
+
+        public void LogOut()
+        {
+            try
+            {
+                GoogleDrive.LogOut();
+            }
+            catch { }
+        }
     }
 }

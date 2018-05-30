@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using mp3Cataloguer.Logic;
 using mp3Cataloguer.UI;
 
 namespace mp3Cataloguer

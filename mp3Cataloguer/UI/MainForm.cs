@@ -76,5 +76,20 @@ namespace mp3Cataloguer.UI
         {
             logic.Search(toolStripTextBox.Text);
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            logic.Backup();
+        }
+
+        private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            logic.Restore();
+        }
+
+        private void deleteBackupAndLogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            logic.LogOut();
+        }
     }
 }
