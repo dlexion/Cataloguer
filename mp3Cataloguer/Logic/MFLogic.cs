@@ -161,12 +161,12 @@ namespace mp3Cataloguer.Logic
             try
             {
                 GoogleDrive.Upload("data.xml");
+                MessageBox.Show("Done");
             }
             catch
-            {
-                
+            { 
+
             }
-            MessageBox.Show("Backuped");
         }
 
         public void Restore()

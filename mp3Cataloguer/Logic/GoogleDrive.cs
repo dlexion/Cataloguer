@@ -59,6 +59,14 @@ namespace mp3Cataloguer.Logic
                 request.Fields = "nextPageToken, files(id, name)";
                 request.PageToken = pageToken;
                 var result = request.Execute();
+                if(result.Files.Count > 1)
+                {
+                    foreach(var file in result.Files)
+                    {
+                        Delete(file.Id);
+                    }
+                }
+
                 foreach (var file in result.Files)
                 {
                     Console.WriteLine(String.Format(
